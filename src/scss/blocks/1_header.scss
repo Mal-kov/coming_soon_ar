@@ -1,0 +1,130 @@
+header{
+  height: 51vh;
+  position: relative;
+
+  .header_block{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    .header_logo{
+      margin-right: 50px;
+    }
+
+    .header_info{
+
+      .header_infoCounter{
+
+        .countdown-title {
+          color: $green;
+          font-weight: bold;
+          font-size: 40px;
+          margin: 40px 0px 20px;
+          text-align: center;
+        }
+
+        .countdown{
+          width: 505px;
+
+          .countdown {
+            font-family: sans-serif;
+            color: $white;
+            display: inline-block;
+            font-weight: 100;
+            text-align: center;
+            font-size: 30px;
+          }
+            
+          .countdown-number {
+            padding: 10px;
+            background: $white;
+            display: inline-block;
+            border-right: 1px solid $l_green;
+
+            &:last-child{
+              border-right: none;
+            }
+          }
+            
+          .countdown-time {
+            padding: 25px;
+            background: $white;
+            display: inline-block;
+            font-size: 34px;
+            font-weight: bold;
+            color: $green;
+          }
+            
+          .countdown-text {
+            display: block;
+            padding-top: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            color: $green;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:680px){
+  header{
+  
+    .header_block{
+      flex-direction: column;
+  
+  
+      .header_logo{
+        
+        width: 20%;
+        margin: 0 auto;
+        img{
+          display: block;
+          width: 100%;
+        }
+      }
+  
+      .header_info{
+  
+        .header_infoCounter{
+  
+          .countdown-title {
+            font-size: 32px;
+            margin: 20px 0px 10px;
+          }
+  
+          .countdown{
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+  
+            .countdown {
+              font-size: 20px;
+            }
+              
+            .countdown-number {
+              flex-basis: 24%;
+            }
+              
+            .countdown-time {
+              padding: 0;
+              width: 100%;
+              font-size: 20px;
+              margin: 0 auto;
+              text-align: center;
+            }
+              
+            .countdown-text {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
